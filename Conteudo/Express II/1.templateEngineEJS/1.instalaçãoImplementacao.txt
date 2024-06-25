@@ -1,0 +1,28 @@
+TUDO QUE ESTÁ AQUI FOI CRIADO EM CRIAÇÕES > expII
+
+Instalação manual:
+
+1. Criar uma pasta e escolher um nome a ela
+2. Entrar na pasta e iniciar o npm:
+   npm init -y
+3. Instalar o express ejs:
+   npm install express ejs --save
+4. Dentro da pasta devemos criar um arquivo app.js
+5. Devemos levar no app.js o express que foi instalado:
+   const express = require('express'); // Para dizer que queremos usar o express
+   const app = express();
+   app.set('view engine', 'ejs'); // Dizemos que vamos usar o ejs como template engine
+   app.listen(3000, () => {
+      console.log("Server rodando");
+   });
+
+DETALHE: Esse é o método manual, também podemos fazer o seguinte:
+Primeiro devemos instalar o express global:
+
+  npm install -g express-generator
+
+Depois:
+
+   express --view=ejs nomeProjetoInexistente
+
+Esse modelo automático cria a pasta com o nome que você deu
